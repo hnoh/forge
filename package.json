@@ -1,0 +1,36 @@
+{
+    "name": "forge",
+    "version": "0.0.1-alpha-1",
+    "description": "forge library ES6",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "ng": "ng",
+        "test": "ng test",
+        "lint": "ng lint"
+    },
+    "authors": [{
+            "name": "the.neul",
+            "email": "theneul@gmail.com",
+            "url": "https://github.com/???"
+        },
+        {
+            "name": "sky oh",
+            "email": "sky.oh@nsuslab.com",
+            "url": "https://github.com/hnoh"
+        }
+    ],
+    "private": true,
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        "@angular/compiler": "^6.1.0",
+        "@angular/core": "^6.1.0",
+        "rxjs": "^6.0.0",
+        "zone.js": "^0.8.26",
+        "codelyzer": "^4.0.1",
+        "tslint": "^5.9.1",
+        "typescript": "^2.9.2"
+    }
+}

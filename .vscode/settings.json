@@ -1,0 +1,8 @@
+{
+    "editor.tabCompletion": true,
+    "editor.formatOnSave": false,
+    "prettier.singleQuote": true,
+    "tslint.autoFixOnSave": true,
+    "git.ignoreLimitWarning": true,
+    "prettier.printWidth": 180,
+}

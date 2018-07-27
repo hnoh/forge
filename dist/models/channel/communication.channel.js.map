@@ -1,0 +1,1 @@
+{"version":3,"file":"communication.channel.js","sourceRoot":"","sources":["../../../src/models/channel/communication.channel.ts"],"names":[],"mappings":";;AACA;IACI,YAA6B,MAAe,EAAY,YAAuB;QAAlD,WAAM,GAAN,MAAM,CAAS;QAAY,iBAAY,GAAZ,YAAY,CAAW;IAAG,CAAC;IAEnF,IAAW,OAAO;QACd,OAAO,IAAI,CAAC,MAAM,CAAC;IACvB,CAAC;IAED,IAAW,SAAS;QAChB,OAAO,IAAI,CAAC,YAAY,CAAC;IAC7B,CAAC;CAGJ;AAZD,4DAYC"}

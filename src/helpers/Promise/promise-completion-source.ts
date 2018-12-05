@@ -1,5 +1,5 @@
 import { ParameterExpr, createExpr } from '../createInstance';
-export class Task<T> {
+export class PromiseCompletionSource<T> {
     private resolver: (value?: T | PromiseLike<T>) => void;
     private _promise: Promise<T>;
     private value: T = undefined;
@@ -7,16 +7,18 @@ export class Task<T> {
     /**
      * @param timeout mill
      */
-    public constructor(timeout: number = 0, public id: string = '') {
+    public constructor(private option?: { id: string; timeout?: number }) {
         this._promise = new Promise<T>(resolve => {
             this.resolver = resolve;
         });
 
-        setTimeout(() => {
-            if (this.value === undefined) {
-                throw new Error(`Task wait timeout, id = ${id === '' ? 'none' : id}`);
-            }
-        }, timeout);
+        if (option && option.timeout !== undefined) {
+            setTimeout(() => {
+                if (this.value === undefined) {
+                    throw new Error(`Task wait timeout, id = ${this.option.id}`);
+                }
+            }, option.timeout);
+        }
     }
 
     public setResult(param: ParameterExpr<T>): void {
@@ -36,6 +38,10 @@ export class Task<T> {
         this.value = createExpr(param);
         this.resolver(this.value);
         return true;
+    }
+
+    public isCompleted(): boolean {
+        return this.value !== undefined;
     }
 
     public wait(): Promise<T> {

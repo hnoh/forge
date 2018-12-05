@@ -25,6 +25,6 @@
         "dist",
     ],
     "include": [
-        "src/*"
+        "src/*", "src/helpers/Promise/promise-completion-source.ts"
     ]
 }
